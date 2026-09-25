@@ -49,12 +49,35 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .hero h1 { margin:0; font-size:2.45rem; font-weight:800; letter-spacing:-1px; }
 .hero p { margin:.45rem 0 0; color:#dbeafe; font-size:1rem; }
 .card {
-    background: rgba(255,255,255,.92); border:1px solid #e5e7eb; border-radius:18px;
-    padding:1.15rem 1.25rem; box-shadow:0 8px 25px rgba(15,23,42,.06);
+    background: rgba(255,255,255,.92);
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 1.15rem 1.25rem;
+    box-shadow: 0 8px 25px rgba(15,23,42,.06);
+    color: #1f2937;
 }
+
+.card h3,
+.card p,
+.card b {
+    color: #1f2937;
+}
+
 .metric-card {
-    background:white; border:1px solid #e5e7eb; border-radius:16px; padding:1rem 1.1rem;
-    box-shadow:0 5px 18px rgba(15,23,42,.05);
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+    box-shadow: 0 5px 18px rgba(15,23,42,.05);
+    color: #1f2937;
+}
+
+.metric-card h2 {
+    color: #111827 !important;
+}
+
+.metric-card .small {
+    color: #64748b !important;
 }
 .badge {
     display:inline-block; padding:.35rem .7rem; border-radius:999px; font-weight:700;
