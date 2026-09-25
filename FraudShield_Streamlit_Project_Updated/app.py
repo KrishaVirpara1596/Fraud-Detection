@@ -126,6 +126,31 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .result-safe {background:#ecfdf5;border:1px solid #a7f3d0;border-radius:20px;padding:1.4rem;}
 .result-risk {background:#fff1f2;border:1px solid #fecdd3;border-radius:20px;padding:1.4rem;}
 .small {color:#64748b;font-size:.86rem;}
+/* ===== FINAL TEXT VISIBILITY FIX ===== */
+
+/* Hero headings on every page */
+.hero h1,
+.hero h2,
+.hero h3 {
+    color: #ffffff !important;
+}
+
+/* Hero normal text */
+.hero p {
+    color: #ffffff !important;
+}
+
+/* Streamlit expander header */
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: #ffffff !important;
+}
+
+/* Keep expander content readable */
+[data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p {
+    color: #1f2937 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
