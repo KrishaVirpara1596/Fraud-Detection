@@ -151,33 +151,34 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p {
     color: #1f2937 !important;
 }
-/* ===== ADVANCED DETAILS - SAME COLOR IN ALL STATES ===== */
+/* ===== ADVANCED DETAILS: FIX NORMAL + HOVER + OPEN STATES ===== */
 
-[data-testid="stExpander"] details > summary,
-[data-testid="stExpander"] details > summary:hover,
-[data-testid="stExpander"] details > summary:focus,
-[data-testid="stExpander"] details > summary:active {
+div[data-testid="stExpander"] details > summary,
+div[data-testid="stExpander"] details > summary:hover,
+div[data-testid="stExpander"] details > summary:focus,
+div[data-testid="stExpander"] details > summary:focus-visible,
+div[data-testid="stExpander"] details[open] > summary {
+    background: #191c24 !important;
     background-color: #191c24 !important;
     color: #ffffff !important;
+    border: none !important;
 }
 
-/* Text inside the expander header */
-[data-testid="stExpander"] details > summary p,
-[data-testid="stExpander"] details > summary span,
-[data-testid="stExpander"] details > summary div {
+/* Text */
+div[data-testid="stExpander"] details > summary p,
+div[data-testid="stExpander"] details > summary span,
+div[data-testid="stExpander"] details > summary div {
     color: #ffffff !important;
 }
 
-/* Arrow/icon */
-[data-testid="stExpander"] details > summary svg {
+/* Arrow */
+div[data-testid="stExpander"] details > summary svg {
     color: #ffffff !important;
     fill: #ffffff !important;
 }
 
-/* Remove hover color change */
-[data-testid="stExpander"] details > summary:hover p,
-[data-testid="stExpander"] details > summary:hover span,
-[data-testid="stExpander"] details > summary:hover div {
+/* Prevent hover from changing anything */
+div[data-testid="stExpander"] details > summary:hover * {
     color: #ffffff !important;
 }
 </style>
