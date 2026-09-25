@@ -36,6 +36,46 @@ st.markdown("""
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stAppViewContainer"] {
     background: radial-gradient(circle at 10% 0%, #eef5ff 0%, #f8fafc 32%, #ffffff 75%);
+    color: #1f2937 !important;
+}
+
+/* Main page text */
+[data-testid="stAppViewContainer"] .stMarkdown {
+    color: #1f2937 !important;
+}
+
+/* Headings and normal text */
+[data-testid="stAppViewContainer"] h1,
+[data-testid="stAppViewContainer"] h2,
+[data-testid="stAppViewContainer"] h3,
+[data-testid="stAppViewContainer"] h4,
+[data-testid="stAppViewContainer"] p {
+    color: #1f2937;
+}
+
+/* Form field labels */
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] * {
+    color: #1f2937 !important;
+}
+
+/* Model metric cards */
+[data-testid="stMetric"] label {
+    color: #475569 !important;
+}
+
+[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: #111827 !important;
+}
+
+[data-testid="stMetric"] [data-testid="stMetricDelta"] {
+    color: #475569 !important;
+}
+
+/* Information boxes */
+[data-testid="stAlert"],
+[data-testid="stAlert"] * {
+    color: #1f2937 !important;
 }
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg,#0b1220 0%,#111c32 100%);
