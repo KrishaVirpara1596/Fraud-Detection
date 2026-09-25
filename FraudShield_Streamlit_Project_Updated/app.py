@@ -172,50 +172,40 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     color: #1f2937 !important;
 }
 /* =====================================================
-   FINAL FIX - ADVANCED DETAILS
-   SAME APPEARANCE: CLOSED / OPEN / HOVER / FOCUS
+   ADVANCED DETAILS - FINAL FIX
    ===================================================== */
 
-[data-testid="stExpander"] details,
-[data-testid="stExpander"] details[open] {
-    background: transparent !important;
-}
-
 [data-testid="stExpander"] details > summary,
-[data-testid="stExpander"] details[open] > summary,
 [data-testid="stExpander"] details > summary:hover,
-[data-testid="stExpander"] details[open] > summary:hover,
 [data-testid="stExpander"] details > summary:focus,
-[data-testid="stExpander"] details[open] > summary:focus,
 [data-testid="stExpander"] details > summary:focus-visible,
-[data-testid="stExpander"] details[open] > summary:focus-visible {
+[data-testid="stExpander"] details[open] > summary {
     background: #191c24 !important;
     background-color: #191c24 !important;
     color: #ffffff !important;
-    border: none !important;
-    box-shadow: none !important;
 }
 
-/* Every element inside the header */
-[data-testid="stExpander"] details > summary *,
-[data-testid="stExpander"] details[open] > summary *,
-[data-testid="stExpander"] details > summary:hover *,
-[data-testid="stExpander"] details[open] > summary:hover * {
+/* Advanced Details text */
+[data-testid="stExpander"] details > summary p,
+[data-testid="stExpander"] details > summary span,
+[data-testid="stExpander"] details > summary div {
     color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
 }
 
-/* Arrow */
-[data-testid="stExpander"] details > summary svg,
-[data-testid="stExpander"] details[open] > summary svg {
+/* Everything inside the header */
+[data-testid="stExpander"] details > summary * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Arrow and gear/icon */
+[data-testid="stExpander"] details > summary svg {
     color: #ffffff !important;
     fill: #ffffff !important;
     stroke: #ffffff !important;
-}
-
-/* Remove Streamlit hover/focus effects */
-[data-testid="stExpander"] details > summary:hover,
-[data-testid="stExpander"] details > summary:active {
-    filter: none !important;
     opacity: 1 !important;
 }
 </style>
