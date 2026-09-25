@@ -151,6 +151,35 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p {
     color: #1f2937 !important;
 }
+/* ===== ADVANCED DETAILS - SAME COLOR IN ALL STATES ===== */
+
+[data-testid="stExpander"] details > summary,
+[data-testid="stExpander"] details > summary:hover,
+[data-testid="stExpander"] details > summary:focus,
+[data-testid="stExpander"] details > summary:active {
+    background-color: #191c24 !important;
+    color: #ffffff !important;
+}
+
+/* Text inside the expander header */
+[data-testid="stExpander"] details > summary p,
+[data-testid="stExpander"] details > summary span,
+[data-testid="stExpander"] details > summary div {
+    color: #ffffff !important;
+}
+
+/* Arrow/icon */
+[data-testid="stExpander"] details > summary svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* Remove hover color change */
+[data-testid="stExpander"] details > summary:hover p,
+[data-testid="stExpander"] details > summary:hover span,
+[data-testid="stExpander"] details > summary:hover div {
+    color: #ffffff !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
