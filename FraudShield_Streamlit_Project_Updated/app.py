@@ -151,35 +151,52 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p {
     color: #1f2937 !important;
 }
-/* ===== ADVANCED DETAILS: FIX NORMAL + HOVER + OPEN STATES ===== */
+/* =====================================================
+   FINAL FIX - ADVANCED DETAILS
+   SAME APPEARANCE: CLOSED / OPEN / HOVER / FOCUS
+   ===================================================== */
 
-div[data-testid="stExpander"] details > summary,
-div[data-testid="stExpander"] details > summary:hover,
-div[data-testid="stExpander"] details > summary:focus,
-div[data-testid="stExpander"] details > summary:focus-visible,
-div[data-testid="stExpander"] details[open] > summary {
+[data-testid="stExpander"] details,
+[data-testid="stExpander"] details[open] {
+    background: transparent !important;
+}
+
+[data-testid="stExpander"] details > summary,
+[data-testid="stExpander"] details[open] > summary,
+[data-testid="stExpander"] details > summary:hover,
+[data-testid="stExpander"] details[open] > summary:hover,
+[data-testid="stExpander"] details > summary:focus,
+[data-testid="stExpander"] details[open] > summary:focus,
+[data-testid="stExpander"] details > summary:focus-visible,
+[data-testid="stExpander"] details[open] > summary:focus-visible {
     background: #191c24 !important;
     background-color: #191c24 !important;
     color: #ffffff !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* Text */
-div[data-testid="stExpander"] details > summary p,
-div[data-testid="stExpander"] details > summary span,
-div[data-testid="stExpander"] details > summary div {
+/* Every element inside the header */
+[data-testid="stExpander"] details > summary *,
+[data-testid="stExpander"] details[open] > summary *,
+[data-testid="stExpander"] details > summary:hover *,
+[data-testid="stExpander"] details[open] > summary:hover * {
     color: #ffffff !important;
 }
 
 /* Arrow */
-div[data-testid="stExpander"] details > summary svg {
+[data-testid="stExpander"] details > summary svg,
+[data-testid="stExpander"] details[open] > summary svg {
     color: #ffffff !important;
     fill: #ffffff !important;
+    stroke: #ffffff !important;
 }
 
-/* Prevent hover from changing anything */
-div[data-testid="stExpander"] details > summary:hover * {
-    color: #ffffff !important;
+/* Remove Streamlit hover/focus effects */
+[data-testid="stExpander"] details > summary:hover,
+[data-testid="stExpander"] details > summary:active {
+    filter: none !important;
+    opacity: 1 !important;
 }
 </style>
 """, unsafe_allow_html=True)
