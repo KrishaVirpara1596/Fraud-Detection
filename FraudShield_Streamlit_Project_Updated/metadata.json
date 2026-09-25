@@ -1,0 +1,63 @@
+{
+  "rows": 11994,
+  "features": 25,
+  "target": "fraud reported",
+  "dropped_columns": [
+    "claim_number",
+    "claim_date",
+    "zip_code"
+  ],
+  "train_rows": 9595,
+  "test_rows": 2399,
+  "fraud_rate": 0.24603968650992164,
+  "threshold": 0.25,
+  "metrics_at_default_0.5": {
+    "accuracy": 0.7594831179658191,
+    "precision": 0.533678756476684,
+    "recall": 0.17457627118644067,
+    "f1": 0.26309067688378035,
+    "roc_auc": 0.6388396998060545
+  },
+  "metrics_at_fraud_sensitive_0.25": {
+    "accuracy": 0.4676948728636932,
+    "precision": 0.29269764634882317,
+    "recall": 0.8220338983050848,
+    "f1": 0.43168669336893634
+  },
+  "scratch_logistic_metrics": {
+    "accuracy": 0.7728220091704877,
+    "precision": 0.7777777777777778,
+    "recall": 0.10677966101694915,
+    "f1": 0.18777943368107303,
+    "roc_auc": 0.6174457280452728
+  },
+  "categorical_features": [
+    "gender",
+    "marital_status",
+    "property_status",
+    "claim_day_of_week",
+    "accident_site",
+    "witness_present",
+    "channel",
+    "age_of_vehicle",
+    "vehicle_category",
+    "vehicle_color",
+    "injury_claim"
+  ],
+  "numeric_features": [
+    "age_of_driver",
+    "safety_rating",
+    "annual_income",
+    "high_education",
+    "address_change",
+    "past_num_of_claims",
+    "liab_prct",
+    "police_report",
+    "vehicle_price",
+    "total_claim",
+    "policy deductible",
+    "annual premium",
+    "days open",
+    "form defects"
+  ]
+}
