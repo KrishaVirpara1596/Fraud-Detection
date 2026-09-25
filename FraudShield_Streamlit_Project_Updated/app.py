@@ -140,14 +140,34 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     color: #ffffff !important;
 }
 
-/* Streamlit expander header */
-[data-testid="stExpander"] summary,
-[data-testid="stExpander"] summary p,
-[data-testid="stExpander"] summary span {
-    color: #ffffff !important;
+/* Advanced Details expander */
+[data-testid="stExpander"] {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 12px !important;
 }
 
-/* Keep expander content readable */
+[data-testid="stExpander"] summary {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span {
+    color: #1f2937 !important;
+}
+
+[data-testid="stExpander"] summary:hover {
+    background: #f8fafc !important;
+}
+
+[data-testid="stExpander"] summary:focus,
+[data-testid="stExpander"] summary:focus-visible {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    outline: none !important;
+}
+
 [data-testid="stExpander"] div[data-testid="stMarkdownContainer"] p {
     color: #1f2937 !important;
 }
